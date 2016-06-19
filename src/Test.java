@@ -7,34 +7,22 @@ import java.util.concurrent.RunnableFuture;
  */
 public class Test {
     public static void main(String[] args) {
-        System.out.println("haha");
+        Integer a = 1;
+        Integer b = 2;
+        Integer c = 3;
+        Integer d = 3;
+        Integer e = 321;
+        Integer g = 321;
+        Long f = 321L;
+        System.out.println(c==d);
+        System.out.println(c==(a+b));
+        System.out.println(e==g);
 
-
-        List<String> ss = new ArrayList<>();
-
-        ss = null;
-        ss.forEach(System.out::println);
 
 
     }
 
-    public static void repeatMessage2(String text, int count) {
-        Runnable r = () -> {
-            for (int i = 0; i < count; i++){
-                System.out.println(text);
-            }
-        };
-        new Thread(r).start();
-    }
 
 
-    public static void repeatMessage(String text, int count) {
-        Runnable r = () -> {
-            while(count>0) {
-//                count--;
-                System.out.println(text);
-            }
-        };
-        new Thread(r).start();
-    }
+
 }
